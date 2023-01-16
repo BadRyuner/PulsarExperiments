@@ -1,0 +1,1150 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &53570839057490461
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4408806207946729038}
+  - component: {fileID: 6302462383971453980}
+  m_Layer: 19
+  m_Name: Thruster1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4408806207946729038
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53570839057490461}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -1.62}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3636189881384990449}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &6302462383971453980
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53570839057490461}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!1 &785726292088517364
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3636189881384990449}
+  - component: {fileID: 8205711642159519918}
+  - component: {fileID: 10497581267228606}
+  - component: {fileID: 1035934104810144530}
+  - component: {fileID: 3113556882759296301}
+  - component: {fileID: 4410808048766865028}
+  m_Layer: 19
+  m_Name: Body
+  m_TagString: Ship
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3636189881384990449
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 785726292088517364}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_Children:
+  - {fileID: 3756993179382117395}
+  - {fileID: 1071516854845805387}
+  - {fileID: 8098039162928326499}
+  - {fileID: 4408806207946729038}
+  - {fileID: 3553676242727512718}
+  - {fileID: 714564741965739722}
+  m_Father: {fileID: 3243382982986464261}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &8205711642159519918
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 785726292088517364}
+  m_Mesh: {fileID: -2432090755550338912, guid: 599db505ec95e0a428d772bfb31161a5, type: 3}
+--- !u!64 &10497581267228606
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 785726292088517364}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2432090755550338912, guid: 599db505ec95e0a428d772bfb31161a5, type: 3}
+--- !u!23 &1035934104810144530
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 785726292088517364}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 7d722c347991abb4b8cc9bac678977f1, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &3113556882759296301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 785726292088517364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -103599847, guid: 06dd3d5416bf43ea368cc39ff96e6d5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _transform: {fileID: 3636189881384990449}
+  _rigidbody: {fileID: 0}
+  _photonView: {fileID: 0}
+  ShipInfo: {fileID: 423144557481667916}
+  targetPos: {x: 0, y: 0, z: 0}
+  targetVel: {x: 0, y: 0, z: 0}
+  targetAngVel: {x: 0, y: 0, z: 0}
+  targetRot: {x: 0, y: 0, z: 0, w: 0}
+  ControlEnabled: 0
+  AIControlled: 1
+  ShowSectorsPilot: 0
+  Throttle: 0
+  InertiaThrottle: 0
+  ManeuverThrottle: 0
+  Boost: 0
+  IsBoosting: 0
+  randomVelocitySmooth: {x: 0, y: 0, z: 0}
+  FlightRingRoll: {fileID: 0}
+  FlightRingYaw: {fileID: 0}
+  FlightRingPitch: {fileID: 0}
+  ExtraLargeCollisionSphereBaseRadius: 0
+  BoostedForceAmtForCollisionAvoidance: 0
+  m_ManualMode: 0
+  TimeSinceWarp: 0
+  AI_TargetVel: {x: 0, y: 0, z: 0}
+  AI_TargetRot: {x: 0, y: 0, z: 0, w: 0}
+  AI_Throttle: 0
+  AI_Manuever: {x: 0, y: 0, z: 0}
+  EnableBoostAI: 1
+  AI_AvoidanceRaysRelDir: []
+  AI_AvoidanceRaysRelDist: []
+  AI_CollisionAvoidance_OverrideFactor: 0
+  InputTorque: {x: 0, y: 0, z: 0}
+  InputTranslation: {x: 0, y: 0, z: 0}
+  InputManueverTranslation: {x: 0, y: 0, z: 0}
+  Debug_LastNetworkedShipPosTime: 0
+  Debug_LastFixedUpdateTime: 0
+  Debug_LastUpdateOthersTime: 0
+  ProximityMines: []
+  TEMP_TurretRotMod: 1
+--- !u!54 &4410808048766865028
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 785726292088517364}
+  serializedVersion: 2
+  m_Mass: 250
+  m_Drag: 0.3
+  m_AngularDrag: 0.3
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 0
+  m_CollisionDetection: 2
+--- !u!1 &1760172079652119385
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 714564741965739722}
+  - component: {fileID: 6644042323274612574}
+  m_Layer: 19
+  m_Name: Thruster3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &714564741965739722
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1760172079652119385}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.57, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3636189881384990449}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &6644042323274612574
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1760172079652119385}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!1 &4193123704346226160
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1561394176357860032}
+  - component: {fileID: 433388572009388068}
+  - component: {fileID: 4700663484792945407}
+  - component: {fileID: 5753204050344630582}
+  m_Layer: 0
+  m_Name: ShipSystems
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1561394176357860032
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4193123704346226160}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3243382982986464261}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &433388572009388068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4193123704346226160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 60018397, guid: 06dd3d5416bf43ea368cc39ff96e6d5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _transform: {fileID: 1561394176357860032}
+  _rigidbody: {fileID: 0}
+  _photonView: {fileID: 0}
+  Health:
+    currentCryptoKey: 0
+    hiddenValue: 40
+    hiddenValueOldByte4:
+      b1: 0
+      b2: 0
+      b3: 0
+      b4: 0
+    inited: 0
+    fakeValue: 0
+    fakeValueActive: 0
+  MaxHealth:
+    currentCryptoKey: 0
+    hiddenValue: 0
+    hiddenValueOldByte4:
+      b1: 0
+      b2: 0
+      b3: 0
+      b4: 0
+    inited: 0
+    fakeValue: 0
+    fakeValueActive: 0
+  MyShipInfo: {fileID: 423144557481667916}
+  MyType: 0
+  MyFire: {fileID: 0}
+  MyNode: {fileID: 0}
+  LastDmgTime: 0
+  MyInstance: {fileID: 0}
+  OnFire:
+    currentCryptoKey: 143
+    hiddenValue: 58
+    inited: 1
+    fakeValue: 0
+    fakeValueActive: 0
+  m_SystemID:
+    currentCryptoKey: 1322552902
+    hiddenValue: -1322552903
+    inited: 1
+    fakeValue: 0
+    fakeValueActive: 0
+--- !u!114 &4700663484792945407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4193123704346226160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1494543813, guid: 06dd3d5416bf43ea368cc39ff96e6d5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _transform: {fileID: 1561394176357860032}
+  _rigidbody: {fileID: 0}
+  _photonView: {fileID: 0}
+  Health:
+    currentCryptoKey: 0
+    hiddenValue: 40
+    hiddenValueOldByte4:
+      b1: 0
+      b2: 0
+      b3: 0
+      b4: 0
+    inited: 0
+    fakeValue: 0
+    fakeValueActive: 0
+  MaxHealth:
+    currentCryptoKey: 0
+    hiddenValue: 40
+    hiddenValueOldByte4:
+      b1: 0
+      b2: 0
+      b3: 0
+      b4: 0
+    inited: 0
+    fakeValue: 0
+    fakeValueActive: 0
+  MyShipInfo: {fileID: 423144557481667916}
+  MyType: 2
+  MyFire: {fileID: 0}
+  MyNode: {fileID: 0}
+  LastDmgTime: 0
+  MyInstance: {fileID: 0}
+  OnFire:
+    currentCryptoKey: 144
+    hiddenValue: 37
+    inited: 1
+    fakeValue: 0
+    fakeValueActive: 0
+  m_SystemID:
+    currentCryptoKey: 2055979984
+    hiddenValue: -2055979985
+    inited: 1
+    fakeValue: 0
+    fakeValueActive: 0
+  NukeArmingFactor: 0
+  IsArmingNuke: 0
+  RegularTurretStationTransforms: []
+  MainTurretStationTransform: {fileID: 0}
+  TurretActivateStringToDraw: 
+  TurretActivateStringToDraw_InputAction: 
+--- !u!114 &5753204050344630582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4193123704346226160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -2035467636, guid: 06dd3d5416bf43ea368cc39ff96e6d5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _transform: {fileID: 1561394176357860032}
+  _rigidbody: {fileID: 0}
+  _photonView: {fileID: 0}
+  Health:
+    currentCryptoKey: 0
+    hiddenValue: 30
+    hiddenValueOldByte4:
+      b1: 0
+      b2: 0
+      b3: 0
+      b4: 0
+    inited: 0
+    fakeValue: 0
+    fakeValueActive: 0
+  MaxHealth:
+    currentCryptoKey: 0
+    hiddenValue: 30
+    hiddenValueOldByte4:
+      b1: 0
+      b2: 0
+      b3: 0
+      b4: 0
+    inited: 0
+    fakeValue: 0
+    fakeValueActive: 0
+  MyShipInfo: {fileID: 423144557481667916}
+  MyType: 0
+  MyFire: {fileID: 0}
+  MyNode: {fileID: 0}
+  LastDmgTime: 0
+  MyInstance: {fileID: 0}
+  OnFire:
+    currentCryptoKey: 204
+    hiddenValue: 121
+    inited: 1
+    fakeValue: 0
+    fakeValueActive: 0
+  m_SystemID:
+    currentCryptoKey: 1908694092
+    hiddenValue: -1908694093
+    inited: 1
+    fakeValue: 0
+    fakeValueActive: 0
+--- !u!1 &5108180697783666795
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1071516854845805387}
+  m_Layer: 19
+  m_Name: TurretPoint0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1071516854845805387
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5108180697783666795}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.37, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3636189881384990449}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6170471987946906091
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3553676242727512718}
+  - component: {fileID: 1733429765722126115}
+  m_Layer: 19
+  m_Name: Thruster2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3553676242727512718
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6170471987946906091}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.54, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3636189881384990449}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &1733429765722126115
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6170471987946906091}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!1 &6540273700057231212
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3243382982986464261}
+  - component: {fileID: 4330917829017337651}
+  - component: {fileID: 6210427220144719180}
+  - component: {fileID: 2184054438287497001}
+  - component: {fileID: 423144557481667916}
+  m_Layer: 0
+  m_Name: ufoPrefab
+  m_TagString: Ship
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3243382982986464261
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6540273700057231212}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3636189881384990449}
+  - {fileID: 1561394176357860032}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4330917829017337651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6540273700057231212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 750185800, guid: 06dd3d5416bf43ea368cc39ff96e6d5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownerId: 0
+  group: 0
+  OwnerShipWasTransfered: 0
+  prefixBackup: -1
+  synchronization: 2
+  onSerializeTransformOption: 3
+  onSerializeRigidBodyOption: 2
+  ownershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 423144557481667916}
+  - {fileID: 2184054438287497001}
+  viewIdField: 0
+  instantiationId: 0
+  currentMasterID: -1
+  isRuntimeInstantiated: 0
+--- !u!114 &6210427220144719180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6540273700057231212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1214575834, guid: 06dd3d5416bf43ea368cc39ff96e6d5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentPriorityType: 32
+  MyShipInfo: {fileID: 423144557481667916}
+  FlightAI_RandomOffsetSmoothed: {x: 0, y: 0, z: 1}
+  AITargetTransform: {fileID: 0}
+  cachedSpaceScrapList: []
+  cachedRepairDepotList: []
+  cachedWarpStationList: []
+  TargetObjectToFlyTo: {fileID: 0}
+  GoToTargetObject_MinDistToFly: 100
+  NearestPosOnLineToShip: {x: 0, y: 0, z: 0}
+--- !u!114 &2184054438287497001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6540273700057231212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 176460428, guid: 06dd3d5416bf43ea368cc39ff96e6d5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _transform: {fileID: 3243382982986464261}
+  _rigidbody: {fileID: 0}
+  _photonView: {fileID: 4330917829017337651}
+  ManualName: UFO
+  ManualSensorStrings: []
+  ManualEMSignature: 0
+  ManualQTSignature: 0
+  HideDistanceFromPlayers: 0
+  ShowAsBlinkingWarning: 0
+  AllowsComponentEditing: 0
+  MyShipInfo: {fileID: 423144557481667916}
+--- !u!114 &423144557481667916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6540273700057231212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1863675669, guid: 4506f505c797c4b43b03d1e49a1b9d7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _transform: {fileID: 3243382982986464261}
+  _rigidbody: {fileID: 0}
+  _photonView: {fileID: 4330917829017337651}
+  IsShipInfoBase: 1
+  GX_ID: 
+  ShipName:
+    currentCryptoKey: 
+    hiddenValue: 
+    cryptoKey: 550047002900ea001600dc002100
+    hiddenChars: 
+    inited: 1
+    fakeValue: 
+    fakeValueActive: 0
+  ShipTypeID: -1
+  SelectedActorID: 
+  MyFlightAI: {fileID: 6210427220144719180}
+  TeamID: -1
+  VisibleDamage: 0
+  ExtraColliders: []
+  CurrentRace: {fileID: 0}
+  RaceLapPercent: 0
+  CompletedLaps: 0
+  PilotingHUD: {fileID: 0}
+  OrbitCameraMinDistance: 60
+  OrbitCameraMaxDistance: 220
+  SensorDishCollectingScrapRange: 1400
+  SlowFlightAI: 0
+  FlagFlightAIToFaceTarget: 0
+  Flag_FlyToObjectPriorityInCombat: 0
+  MinDistToActivate_FlyToObjectPriority: 150
+  DischargeAmount: 0
+  ShouldResetTurretsToLocalScale: 0
+  ReverseThrustEnabled: 0
+  MyTLI: {fileID: 0}
+  OptionalSwarmColliders: []
+  Shield: {fileID: 7235265923796337267}
+  ShieldMaterial: {fileID: 0}
+  MySensorObjectShip: {fileID: 2184054438287497001}
+  ShipExplosionID: 0
+  Exterior: {fileID: 785726292088517364}
+  ExteriorRigidbody: {fileID: 0}
+  ShipRoot: {fileID: 6540273700057231212}
+  DirectionalThrusters:
+  - {fileID: 6170471987946906091}
+  - {fileID: 1760172079652119385}
+  DirectionalThrusters_PS: []
+  Thrusters:
+  - {fileID: 8877443065505382170}
+  ThrusterRenderers: []
+  ReverseThrusters:
+  - {fileID: 53570839057490461}
+  ReverseThrusterRenderers: []
+  AmbientThrusters: []
+  AmbientThrusters_Lights: []
+  RegularTurretPoints: []
+  AutoTurretPoints: []
+  MainTurretPoint: {fileID: 1071516854845805387}
+  AcidicAtmoBoostAlpha: 0
+  CoreInstability: 0
+  AIControlled: 1
+  CreditsLeftBehind: 0
+  DropScrap: 1
+  WarpChargeStage: 0
+  WarpChargeState_Levels: []
+  WarpCharge: 0
+  BehaviorChance_Bravery: 1
+  BehaviorChance_Aggressiveness: 1
+  WeaponPowerLevels: []
+  InWarp: 0
+  IsChargingWarp: 0
+  WarpTargetID: 0
+  LastBeginWarpServerTime: -2147483648
+  WarpTravelPercent: 0
+  WarpTravelDist: 0
+  HasAkGameObjBeenSetup: 0
+  MyShipControl: {fileID: 3113556882759296301}
+  EngineeringSystem: {fileID: 433388572009388068}
+  WeaponsSystem: {fileID: 4700663484792945407}
+  ComputerSystem: {fileID: 5753204050344630582}
+  LifeSupportSystem: {fileID: 0}
+  PilotingSystem: {fileID: 0}
+  playThrustFW: 0
+  playThrustRV: 0
+  SystemPowerLevels: []
+  SystemPowerLevelEditTime: []
+  ReactorTotalPowerLimitPercent: 1
+  ReactorTotalPowerLimitEditTime: -3.4028235e+38
+  ReactorCoolantLevelPercent: 1
+  ReactorCoolingPumpStateEditTime: -3.4028235e+38
+  ReactorCoolingPumpState: 0
+  NumberOfFuelCapsules: 0
+  ReactorCoolingEnabled: 1
+  ReactorLastCoreEjectServerTime: -2147483648
+  ReactorLastCoreEjectServerTimeEditTime: -3.4028235e+38
+  LastReactorMeltdownBeginTime: -2147483648
+  WarpCapsuleIsLoaded: 0
+  WarpCapsuleIsLoadedEditTime: -3.4028235e+38
+  LastLocalManualProgramRechargeTime: 0
+  ReactorOverheatTime: -99999
+  SelectedDistressSignalNetID: 0
+  SelectedDistressSignalNetIDEditTime: -3.4028235e+38
+  DistressSignalActive: 0
+  DistressSignalActiveEditTime: -3.4028235e+38
+  LastCloakingSystemActivatedTime: -3.4028235e+38
+  CloakingSystemPrimeAmt: 0
+  LastCloakingSystemActivated_LocalTime: -3.4028235e+38
+  LastCloakingSystemPriming_LocalTime: -3.4028235e+38
+  SensorDishCapacitorCharge: 0
+  SystemHealthLevels: []
+  SystemPowerNames: []
+  FactionID: 0
+  IsFlagged: 0
+  NoRepLossOnKilled: 0
+  IsEmergencyCooling: 0
+  ComputerPowerNames: []
+  ComputerPowerLevels: []
+  HasShipTransformBeenSet: 0
+  ExteriorTransformCached: {fileID: 0}
+  LerpedShieldBaseIllum: 0
+  LastEnergySphereActivationTime: -500
+  VirusSendQueueCounter: 0
+  LastVirusSendQueueTime: -2147483648
+  Ships_MinDetectCompHistory: 
+  HostileRange: 800
+  ShieldIsActive: 1
+  ShieldMesh: {fileID: -8319336540468346519, guid: be07fc60162e31545ae61963c8e812d6, type: 3}
+  AuxOutputPowerAmount: 0
+  AuxSystemPowerAmounts: []
+  AuxConfig: 255
+  AuxConfig_LastLocalEditTime: -3.4028235e+38
+  LastOCStatusEditTime: 0
+  ActiveScanSensorCurrentStatus: 
+  ActiveScanSensorCurrentProgress: []
+  ActiveScanTotalProgress: []
+  ActiveScanTargetObject: {fileID: 2184054438287497001}
+  NuclearLaunchStage: 0
+  ActiveNuke: {fileID: 0}
+  CloakingPanel: {fileID: 0}
+  LastFireNukeTime: 0
+  TimeInWarp: 0
+  HullPlatingRenderers: []
+  InertiaGeneratorState: 0
+  InertiaGenEditTime: -3.4028235e+38
+  LastAlertLevelSetTime: 0
+  IsQuantumShieldActive: 0
+  LastEMSweepStartTime: -3.4028235e+38
+  CaptainTargetedSpaceTargetID: 0
+  LastCaptainTargetedShipIDLocallyChangedTime: -3.4028235e+38
+  ShieldFreqMode: 0
+  LastShieldFreqModeSetTime: 0
+  LastSelectedMissileLauncherLocallyEditTime: -3.4028235e+38
+  LastDamageRecievedTime: -3.4028235e+38
+  LastHullDamageRecievedTime: -3.4028235e+38
+  LastShldDamageRecievedTime: -3.4028235e+38
+  LastAIAutoYellowAlertSetupTime: 0
+  Hull_Virtual_MeshCollider: {fileID: 0}
+  LerpedHullAlpha: 0
+  LerpedShieldsAlpha: 0
+  FlightThrustMode: 0
+  SuperShieldChargeReadyTime: -2147483648
+  SuperShieldActivateStartTime: -2147483648
+  SuperShieldActivateEndTime: -2147483648
+  LastBoostDragTime: -3.4028235e+38
+  LastFrameDragLockedTime: 0
+  AvgEnergyDamageTakenInLast10Seconds: 0
+  AvgPhysicalDamageTakenInLast10Seconds: 0
+  HostileShips: 
+  LastRecievedWeaknessTime: 0
+  LastReactorCoolingToggleTime: 0
+--- !u!1 &7235265923796337267
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3756993179382117395}
+  - component: {fileID: 2031755164612399507}
+  - component: {fileID: 150378671987806265}
+  m_Layer: 22
+  m_Name: ShieldBubble
+  m_TagString: Shield
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3756993179382117395
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7235265923796337267}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
+  m_Children: []
+  m_Father: {fileID: 3636189881384990449}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &2031755164612399507
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7235265923796337267}
+  m_Mesh: {fileID: -8319336540468346519, guid: be07fc60162e31545ae61963c8e812d6, type: 3}
+--- !u!23 &150378671987806265
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7235265923796337267}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 6c91b6cb59e0c2d43857c2bd12675e70, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &8877443065505382170
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8098039162928326499}
+  - component: {fileID: 1036586913166255477}
+  m_Layer: 19
+  m_Name: Thruster0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8098039162928326499
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8877443065505382170}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1.59}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3636189881384990449}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &1036586913166255477
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8877443065505382170}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
