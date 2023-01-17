@@ -6,6 +6,8 @@
 ## IM HATE GIT
 Pulsar/Library
 Pulsar/Logs
+!Pulsar/Packages/
+Pulsar\Packages\PULSAR_LostColony\plugins
 
 # User-specific files
 *.rsuser
