@@ -1,7 +1,10 @@
-﻿using PulsarModLoader.Content.Items;
+﻿using JetBrains.Annotations;
+using PulsarModLoader;
+using PulsarModLoader.Content.Items;
 using System;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace PulsarExperiments.Features.Items
 {
@@ -88,8 +91,60 @@ namespace PulsarExperiments.Features.Items
 							transform.gameObject.layer = this.MySetupPawn.MySkinnedMeshRenderer.gameObject.layer;
 						}
 					}
-
+					//screen.MyRenderer.enabled = true;
+					if (!this.MySetupPawn.IsDead
+					&& canchange
+					&& this.MySetupPawn == PLNetworkManager.Instance.MyLocalPawn
+					&& !PLNetworkManager.Instance.MainMenu.IsActive()
+					&& PLNetworkManager.Instance.MainMenu.GetActiveMenuCount() == 0
+					&& PLCameraSystem.Instance != null
+					&& PLCameraSystem.Instance.GetModeString() == "LocalPawn"
+					&& PLTabMenu.Instance != null
+					&& !PLTabMenu.Instance.TabMenuActive
+					&& PLTabMenu.Instance.DialogueMenu != null
+					&& PLTabMenu.Instance.DialogueMenu.CurrentActorInstance == null
+					&& PLTabMenu.Instance.TargetContainer == null
+					&& !PLTabMenu.Instance.IsDisplayingOrderMenu()
+					&& !PLVirtualKeyboard.Instance.Visuals.activeSelf
+					&& !PLStarmap.Instance.IsActive
+					&& PLInput.Instance.GetButton(PLInputBase.EInputActionName.skip_warp))
+					{
+						currentscreen++;
+						if (currentscreen > 3) currentscreen = 0;
+						canchange = false;
+						ModMessageHelper.Instance.photonView.RPC("ReceiveMessage", PhotonTargets.Others, "BadExperiments#PulsarExperiments.Features.Items.EngTabletSync", new object[] { MySetupPawn.PlayerID, currentscreen });
+						ChangeCurrentSceen();
+					}
 				}
+			}
+
+			public void ChangeCurrentSceen(bool DoCooldown = true)
+			{
+				PLShipInfo playership = PLNetworkManager.Instance.LocalPlayer.StartingShip;
+				switch (currentscreen)
+				{
+					case 0:
+						screen.MyTargetScreen = playership.MyScreenBase.AllScreens.First(s => s is PLEngineerReactorScreen);
+						break;
+					case 1:
+						screen.MyTargetScreen = playership.MyScreenBase.AllScreens.First(s => s is PLEngineerAuxReactorScreen);
+						break;
+					case 2:
+						screen.MyTargetScreen = playership.MyScreenBase.AllScreens.First(s => s is PLEngineerCoolantScreen);
+						break;
+				}
+				if (DoCooldown)
+					playership.StartCoroutine(ButtonCooldown());
+			}
+
+			public byte currentscreen = 0;
+			bool canchange = true;
+
+			public System.Collections.IEnumerator ButtonCooldown()
+			{
+				yield return new WaitForSeconds(1);
+				canchange = true;
+				yield break;
 			}
 
 			public override void UnSetup()
@@ -121,6 +176,11 @@ namespace PulsarExperiments.Features.Items
 						PLShipInfo playership = PLNetworkManager.Instance.LocalPlayer.StartingShip;
 						screen.MyScreenHubBase = playership.MyScreenBase;
 						screen.MyTargetScreen = playership.MyScreenBase.AllScreens.First(s => s is PLEngineerReactorScreen); // can take any screen
+						var resizer = screen.transform.parent;
+						var scale = resizer.localScale;
+						scale.x = 1.05f;
+						scale.y = 0.77f;
+						resizer.localScale = scale;
 					}
 				}
 			}
@@ -137,6 +197,18 @@ namespace PulsarExperiments.Features.Items
 				my.materials = game.materials;
 				my.transform.GetComponent<MeshFilter>().mesh = game.transform.GetComponent<MeshFilter>().mesh;
 			}
+		}
+	}
+
+	public sealed class EngTabletSync : ModMessage
+	{
+		public override void HandleRPC(object[] arguments, PhotonMessageInfo sender)
+		{
+			int playerId = (int)arguments[0];
+			byte changeto = (byte)arguments[1];
+			var tablet = (PLServer.Instance.AllPlayers.First(p => p.GetPlayerID() == playerId).MyInventory.ActiveItem as EngTabletMod.EngTablet);
+			tablet.currentscreen = changeto;
+			tablet.ChangeCurrentSceen(false);
 		}
 	}
 }
