@@ -15,12 +15,19 @@ namespace PulsarExperiments
 		public static GameObject Katana;
 		public static GameObject FireAxe;
 
+		public static GameObject EngTablet;
+
 		public static GameObject ScaryyyyUfo;
+
+		internal static AssetBundle bundle;
 
 		public static void LoadPrefabs()
 		{
+			if (bundle != null)
+				bundle.Unload(true);
+
 			var assetbundlePath = Path.Combine(new FileInfo(typeof(Prefabs).Assembly.Location).Directory.FullName, "experiments.bundle");
-			var bundle = AssetBundle.LoadFromFile(assetbundlePath);
+			bundle = AssetBundle.LoadFromFile(assetbundlePath);
 
 			SpaceEagle = bundle.LoadAsset<GameObject>("SpaceEaglePrefab");
 			if (SpaceEagle == null)
@@ -33,6 +40,11 @@ namespace PulsarExperiments
 			FireAxe = bundle.LoadAsset<GameObject>("FireAxePrefab");
 			if (FireAxe == null)
 				throw new Exception("Cant load FireAxe!");
+
+			EngTablet = bundle.LoadAsset<GameObject>("EngTabletPrefab");
+			if (EngTablet == null)
+				throw new Exception("Cant load EngTablet!");
+			Features.Items.EngTabletMod.EngTablet.FixPrefabShader(EngTablet);
 
 			ScaryyyyUfo = bundle.LoadAsset<GameObject>("ufoPrefab");
 			if (Katana == null)

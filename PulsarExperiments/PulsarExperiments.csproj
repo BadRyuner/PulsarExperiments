@@ -84,6 +84,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Commands.cs" />
+    <Compile Include="Features\Items\EngTablet.cs" />
     <Compile Include="Features\Items\FireAxe.cs" />
     <Compile Include="Features\Items\Helpers\HitOnCollide.cs" />
     <Compile Include="Features\Items\PLPawnItem_Melee.cs" />

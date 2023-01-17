@@ -36,11 +36,26 @@ namespace PulsarExperiments
 						PLNetworkManager.Instance.LocalPlayer.MyInventory.UpdateItem(PLServer.Instance.PawnInvItemIDCounter++, Main, Sub, 0, -1);
 					}
 					break;
+				case "t":
+					{
+						PulsarModLoader.Content.Items.ItemModManager.Instance.GetItemIDsFromName("Engineer Tablet", out int Main, out int Sub);
+						PLNetworkManager.Instance.LocalPlayer.MyInventory.UpdateItem(PLServer.Instance.PawnInvItemIDCounter++, Main, Sub, 0, -1);
+					}
+					break;
 				case "ufo":
 					{
 						var ufoid = (EShipType)UfoShip.UFOShipType;
 						PLEncounterManager.Instance.GetCPEI().SpawnEnemyShip(ufoid, new PLPersistantShipInfo(ufoid, 2, PLServer.GetCurrentSector()));
 					}
+					break;
+				case "unload":
+					Prefabs.bundle.Unload(true);
+					break;
+				case "load":
+					Prefabs.LoadPrefabs();
+					break;
+				default:
+					PulsarModLoader.Utilities.Messaging.Notification($"Unknown subcommand: {arguments}");
 					break;
 			}
 		}
