@@ -6,6 +6,7 @@
 ## IM HATE GIT
 Pulsar/Library
 Pulsar/Logs
+Pulsar/Temp
 
 # User-specific files
 *.rsuser
@@ -432,4 +433,5 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
-Pulsar\Packages\PULSAR_LostColony\plugins
+Pulsar/Packages/PULSAR_LostColony/plugins
+Pulsar/Packages/PULSAR_LostColony

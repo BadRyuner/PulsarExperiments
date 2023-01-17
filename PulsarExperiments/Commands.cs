@@ -17,20 +17,26 @@ namespace PulsarExperiments
 		{
 			switch(arguments)
 			{
-				case "1":
+				case "katana":
 					{
 						PulsarModLoader.Content.Items.ItemModManager.Instance.GetItemIDsFromName("PoorKatana", out int Main, out int Sub);
 						PLNetworkManager.Instance.LocalPlayer.MyInventory.UpdateItem(PLServer.Instance.PawnInvItemIDCounter++, Main, Sub, 0, -1);
 
 					}
 					break;
-				case "2":
+				case "fireaxe":
+					{
+						PulsarModLoader.Content.Items.ItemModManager.Instance.GetItemIDsFromName("FireAxe", out int Main, out int Sub);
+						PLNetworkManager.Instance.LocalPlayer.MyInventory.UpdateItem(PLServer.Instance.PawnInvItemIDCounter++, Main, Sub, 0, -1);
+					}
+					break;
+				case "eagle":
 					{
 						PulsarModLoader.Content.Items.ItemModManager.Instance.GetItemIDsFromName("SpaceEagle", out int Main, out int Sub);
 						PLNetworkManager.Instance.LocalPlayer.MyInventory.UpdateItem(PLServer.Instance.PawnInvItemIDCounter++, Main, Sub, 0, -1);
 					}
 					break;
-				case "3":
+				case "ufo":
 					{
 						var ufoid = (EShipType)UfoShip.UFOShipType;
 						PLEncounterManager.Instance.GetCPEI().SpawnEnemyShip(ufoid, new PLPersistantShipInfo(ufoid, 2, PLServer.GetCurrentSector()));

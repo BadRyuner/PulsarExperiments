@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9057f7f601990a4883b2cb295c4f43e, type: 3}
   m_Name: ThunderKitSettings
   m_EditorClassIdentifier: 
-  FirstLoad: 1
+  FirstLoad: 0
   ShowOnStartup: 1
   GameExecutable: PULSAR_LostColony.exe
   GamePath: D:\Steam\steamapps\common\PULSARLostColony
   Is64Bit: 1
   DateTimeFormat: HH:mm:ss:fff
   CreatedDateFormat: MMM/dd HH:mm:ss
-  ShowLogWindow: 1
+  ShowLogWindow: 0
   MarkdownOpenMode: 1
   SelectedPipeline: {fileID: 11400000, guid: b26ac317299407c44802f581bdd493ea, type: 2}
   SelectedManifest: {fileID: 0}

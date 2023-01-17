@@ -71,7 +71,7 @@ namespace PulsarExperiments.Features.Items
 				if (!CanAttack()) return;
 				if (MySetupPawn.MyController.Stamina < StaminaLoss) return;
 				
-				ModMessageHelper.Instance.photonView.RPC("ReceiveMessage", PhotonTargets.Others, "BadExperiments#PulsarExperiments.Features.Items.PLPawnItem_MeleeSync", new object[] { MySetupPawn.PlayerID, NetID });
+				ModMessageHelper.Instance.photonView.RPC("ReceiveMessage", PhotonTargets.Others, "BadExperiments#PulsarExperiments.Features.Items.MeleeSync", new object[] { MySetupPawn.PlayerID, NetID });
 
 				MySetupPawn.MyController.Stamina -= StaminaLoss;
 				MySetupPawn.MyController.LastSprintTime = Time.time;
@@ -133,7 +133,7 @@ namespace PulsarExperiments.Features.Items
 		}
 	}
 
-	public sealed class PLPawnItem_MeleeSync : ModMessage
+	public sealed class MeleeSync : ModMessage
 	{
 		public override void HandleRPC(object[] arguments, PhotonMessageInfo sender)
 		{

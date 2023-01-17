@@ -11,7 +11,10 @@ namespace PulsarExperiments
 	public static class Prefabs // PulsarExperiments.Prefabs
 	{
 		public static GameObject SpaceEagle;
+
 		public static GameObject Katana;
+		public static GameObject FireAxe;
+
 		public static GameObject ScaryyyyUfo;
 
 		public static void LoadPrefabs()
@@ -26,6 +29,10 @@ namespace PulsarExperiments
 			Katana = bundle.LoadAsset<GameObject>("KatanaPrefab");
 			if (Katana == null)
 				throw new Exception("Cant load Katana!");
+
+			FireAxe = bundle.LoadAsset<GameObject>("FireAxePrefab");
+			if (FireAxe == null)
+				throw new Exception("Cant load FireAxe!");
 
 			ScaryyyyUfo = bundle.LoadAsset<GameObject>("ufoPrefab");
 			if (Katana == null)
