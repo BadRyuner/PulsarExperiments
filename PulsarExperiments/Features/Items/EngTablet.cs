@@ -15,17 +15,17 @@ namespace PulsarExperiments.Features.Items
 			public EngTablet()
 				: base(EPawnItemType.E_LASERPISTOL)
 			{
-				Desc = "A handheld device that scans an area to detect points of interest.";
-				m_MarketPrice = 3500;
+				Desc = "Remote reactor control for a lazy engineer";
+				m_MarketPrice = 5500;
 				base.UsesHeat = false;
 				m_AnimID = 3;
-				MyAltUtilityType = EItemUtilityType.E_SCANNING;
 			}
 
 			public override string GetItemName(bool skipLocalization = false) => "Engineer Tablet";
 
 			public override GameObject GetVisualPrefab() => Prefabs.EngTablet;
 
+			// what if this can work in VR? Hmmmmm. I cant test this, sorry.
 			public override void VRPositionUpdate()
 			{
 				PLCameraMode_Pilot plcameraMode_Pilot = PLCameraSystem.Instance.CurrentCameraMode as PLCameraMode_Pilot;
@@ -60,22 +60,6 @@ namespace PulsarExperiments.Features.Items
 					{
 						this.MyItemInstance.gameObject.SetActive(!this.MySetupPawn.IsSprinting);
 					}
-					/* if (PLServer.Instance != null && PLServer.Instance.IsReflection_FlipIsActiveLocal)
-					{
-						if (this.MyItemInstance.transform.GetChild(0).localScale.x > 0f)
-						{
-							Vector3 localScale = this.MyItemInstance.transform.GetChild(0).localScale;
-							localScale.x *= -1f;
-							this.MyItemInstance.transform.GetChild(0).localScale = localScale;
-							return;
-						}
-					}
-					else if (this.MyItemInstance.transform.GetChild(0).localScale.x < 0f)
-					{
-						Vector3 localScale2 = this.MyItemInstance.transform.GetChild(0).localScale;
-						localScale2.x *= -1f;
-						this.MyItemInstance.transform.GetChild(0).localScale = localScale2;
-					} */
 				}
 			}
 
@@ -93,11 +77,11 @@ namespace PulsarExperiments.Features.Items
 				base.OnUpdate();
 				if (this.MyItemInstance != null && this.MySetupPawn != null && this.MySetupPawn.MySkinnedMeshRenderer != null)
 				{
-					if (this.gunChildTransforms == null || this.gunChildTransforms.Length == 0 || this.gunChildTransforms[0] == null)
+					if (this.tabletChildTransforms == null || this.tabletChildTransforms.Length == 0 || this.tabletChildTransforms[0] == null)
 					{
-						this.gunChildTransforms = this.MyItemInstance.gameObject.GetComponentsInChildren<Transform>();
+						this.tabletChildTransforms = this.MyItemInstance.gameObject.GetComponentsInChildren<Transform>();
 					}
-					foreach (Transform transform in this.gunChildTransforms)
+					foreach (Transform transform in this.tabletChildTransforms)
 					{
 						if (transform != null && transform.gameObject.layer != 8)
 						{
@@ -136,7 +120,7 @@ namespace PulsarExperiments.Features.Items
 						screen = gameObject.GetComponentInChildren<PLClonedScreen>();
 						PLShipInfo playership = PLNetworkManager.Instance.LocalPlayer.StartingShip;
 						screen.MyScreenHubBase = playership.MyScreenBase;
-						screen.MyTargetScreen = playership.MyScreenBase.AllScreens.First(s => s is PLEngineerReactorScreen);
+						screen.MyTargetScreen = playership.MyScreenBase.AllScreens.First(s => s is PLEngineerReactorScreen); // can take any screen
 					}
 				}
 			}
@@ -144,7 +128,7 @@ namespace PulsarExperiments.Features.Items
 			public PLPawnItemInstance MyItemInstance;
 			public PLClonedScreen screen;
 
-			private Transform[] gunChildTransforms;
+			private Transform[] tabletChildTransforms;
 
 			internal static void FixPrefabShader(GameObject g)
 			{
