@@ -21,4 +21,4 @@ In Unity Editor:
 4) 👍
 
 Possible problems:
-After restarting unity, errors may appear due to missing scripts.  Just delete the Pulsar/Packages/PulsarLostColony folder and click Import again in ThunderKit.
+1) After restarting unity, errors may appear due to missing scripts.  Just delete the Pulsar/Packages/PulsarLostColony folder and click Import again in ThunderKit. And copy again PulsarExperiments.dll to Pulsar/Assets/
