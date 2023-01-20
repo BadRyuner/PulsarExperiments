@@ -206,6 +206,7 @@
     <Compile Include="Features\Items\PLPawnItem_Melee.cs" />
     <Compile Include="Features\Items\PoorKatana.cs" />
     <Compile Include="Features\Items\SpaceEagle.cs" />
+    <Compile Include="Features\PawnAppearance\Patch.cs" />
     <Compile Include="Features\Ships\Patches.cs" />
     <Compile Include="Features\Ships\UfoShip.cs" />
     <Compile Include="Features\Ships\Utils.cs" />
@@ -217,8 +218,6 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Features\PawnAppearance\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

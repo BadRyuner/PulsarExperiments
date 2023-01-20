@@ -3,8 +3,6 @@ using System.IO;
 using UnityEngine;
 using HarmonyLib;
 using System.Reflection;
-using UnityEngine.SceneManagement;
-using System.Linq;
 
 namespace PulsarExperiments
 {
@@ -56,6 +54,11 @@ namespace PulsarExperiments
 				throw new Exception("Cant load UFO!");
 
 			Features.Ships.Utils.FixShields(ScaryyyyUfo.transform.Find("Exterior").Find("ShieldBubble").GetComponent<MeshRenderer>());
+
+			//foreach (var i in bundle.LoadAllAssets<Mesh>())
+			//	PulsarModLoader.Utilities.Logger.Info($"{i.name}");
+			Features.PawnAppearance.Patch.AddRobotFaces.Add(bundle.LoadAsset<Mesh>("Pyro"));
+			Features.PawnAppearance.Patch.AddRobotFaces.Add(bundle.LoadAsset<Mesh>("sphere"));
 
 			PhotonNetwork.PrefabCache.Add("NetworkPrefabs/UFO", ScaryyyyUfo);
 		}

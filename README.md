@@ -3,14 +3,19 @@
 An example of the implementation of scary things. (Scary - because the code is scary, very scary)
 
 # Examples
-- Melee Weapon (with pseudo-api)
-- Custom Gun (just with custom prefab)
+- Melee Weapon (with pseudo-api, 2 with primitive logic + 1 with special logic)
+- Custom Gun (just with custom prefab, 1 item)
+- Custom Item (code + prefab, Engineer Table)
 - Space Drone (just code & prefab)
+- Custom Faces (for robots only, special patch + code)
 
 # Used
 
 [ThunderKit](https://github.com/PassivePicasso/ThunderKit) - game dll import & asset build script
 [PML](https://github.com/PULSAR-Modders/pulsar-mod-loader) - modding api
+
+# It is important
+After importing the meshes into Unity, you need to set Read/Write to true.
 
 # Build Unity Bundle
 
