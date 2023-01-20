@@ -30,6 +30,12 @@ namespace PulsarExperiments
 						PLNetworkManager.Instance.LocalPlayer.MyInventory.UpdateItem(PLServer.Instance.PawnInvItemIDCounter++, Main, Sub, 0, -1);
 					}
 					break;
+				case "knife":
+					{
+						PulsarModLoader.Content.Items.ItemModManager.Instance.GetItemIDsFromName("Knife", out int Main, out int Sub);
+						PLNetworkManager.Instance.LocalPlayer.MyInventory.UpdateItem(PLServer.Instance.PawnInvItemIDCounter++, Main, Sub, 0, -1);
+					}
+					break;
 				case "eagle":
 					{
 						PulsarModLoader.Content.Items.ItemModManager.Instance.GetItemIDsFromName("SpaceEagle", out int Main, out int Sub);

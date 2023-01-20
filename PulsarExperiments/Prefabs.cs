@@ -14,6 +14,7 @@ namespace PulsarExperiments
 
 		public static GameObject Katana;
 		public static GameObject FireAxe;
+		public static GameObject Knife;
 
 		public static GameObject EngTablet;
 
@@ -41,6 +42,10 @@ namespace PulsarExperiments
 			if (FireAxe == null)
 				throw new Exception("Cant load FireAxe!");
 
+			Knife = bundle.LoadAsset<GameObject>("knifePrefab");
+			if (Knife == null)
+				throw new Exception("Cant load Knife!");
+
 			EngTablet = bundle.LoadAsset<GameObject>("EngTabletPrefab");
 			if (EngTablet == null)
 				throw new Exception("Cant load EngTablet!");
@@ -50,7 +55,7 @@ namespace PulsarExperiments
 			if (Katana == null)
 				throw new Exception("Cant load UFO!");
 
-			Features.Ships.Utils.FixShields(ScaryyyyUfo.transform.Find("Body").Find("ShieldBubble").GetComponent<MeshRenderer>());
+			Features.Ships.Utils.FixShields(ScaryyyyUfo.transform.Find("Exterior").Find("ShieldBubble").GetComponent<MeshRenderer>());
 
 			PhotonNetwork.PrefabCache.Add("NetworkPrefabs/UFO", ScaryyyyUfo);
 		}
