@@ -17,6 +17,7 @@ namespace PulsarExperiments
 		public static GameObject EngTablet;
 
 		public static GameObject ScaryyyyUfo;
+		public static GameObject UfoWithInterior;
 
 		internal static AssetBundle bundle;
 
@@ -53,7 +54,10 @@ namespace PulsarExperiments
 			if (Katana == null)
 				throw new Exception("Cant load UFO!");
 
+			UfoWithInterior = bundle.LoadAsset<GameObject>("ufoIntPrefab");
+
 			Features.Ships.Utils.FixShields(ScaryyyyUfo.transform.Find("Exterior").Find("ShieldBubble").GetComponent<MeshRenderer>());
+			Features.Ships.Utils.FixShields(UfoWithInterior.transform.Find("Exterior").Find("ShieldBubble").GetComponent<MeshRenderer>());
 
 			//foreach (var i in bundle.LoadAllAssets<Mesh>())
 			//	PulsarModLoader.Utilities.Logger.Info($"{i.name}");
@@ -61,6 +65,7 @@ namespace PulsarExperiments
 			Features.PawnAppearance.Patch.AddRobotFaces.Add(bundle.LoadAsset<Mesh>("sphere"));
 
 			PhotonNetwork.PrefabCache.Add("NetworkPrefabs/UFO", ScaryyyyUfo);
+			PhotonNetwork.PrefabCache.Add("NetworkPrefabs/UFOWithInterior", UfoWithInterior);
 		}
 	}
 

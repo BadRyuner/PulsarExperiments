@@ -54,6 +54,12 @@ namespace PulsarExperiments
 						PLEncounterManager.Instance.GetCPEI().SpawnEnemyShip(ufoid, new PLPersistantShipInfo(ufoid, 2, PLServer.GetCurrentSector()));
 					}
 					break;
+				case "ufo1":
+					{
+						var ufoid = (EShipType)UfoWithInteriorShip.ShipTypeInt;
+						PLEncounterManager.Instance.GetCPEI().SpawnEnemyShip(ufoid, new PLPersistantShipInfo(ufoid, 2, PLServer.GetCurrentSector()));
+					}
+					break;
 				case "unload":
 					Prefabs.bundle.Unload(true);
 					break;

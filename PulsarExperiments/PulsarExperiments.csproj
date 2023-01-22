@@ -209,6 +209,7 @@
     <Compile Include="Features\PawnAppearance\Patch.cs" />
     <Compile Include="Features\Ships\Patches.cs" />
     <Compile Include="Features\Ships\UfoShip.cs" />
+    <Compile Include="Features\Ships\UfoWithInteriorShip.cs" />
     <Compile Include="Features\Ships\Utils.cs" />
     <Compile Include="Mod.cs" />
     <Compile Include="Prefabs.cs" />

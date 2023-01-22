@@ -17,6 +17,8 @@ namespace PulsarExperiments.Features.Ships
 
 			if (type == UfoShip.UFOShipType)
 				__result = "UFO";
+			else if (type == UfoWithInteriorShip.ShipTypeInt)
+				__result = "UFOWithInterior";
 		}
 	}
 }
