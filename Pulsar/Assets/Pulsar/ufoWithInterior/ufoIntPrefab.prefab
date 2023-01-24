@@ -15685,7 +15685,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2354221940317195210}
-  - component: {fileID: 6201269327330067350}
   m_Layer: 11
   m_Name: CaptainsChairPivot
   m_TagString: Untagged
@@ -15708,20 +15707,6 @@ Transform:
   m_Father: {fileID: 4260447337084617481}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: -0, z: -0}
---- !u!114 &6201269327330067350
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3716933878172023338}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1774061614, guid: 06dd3d5416bf43ea368cc39ff96e6d5a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Radius: 2
-  Color: {r: 0.9811321, g: 0.124955505, b: 0.124955505, a: 0}
 --- !u!1 &3735068979611396317
 GameObject:
   m_ObjectHideFlags: 0
@@ -36920,7 +36905,7 @@ MonoBehaviour:
   DialogueGlitchImages: []
   EngineThrustFactor: 1
   NukeActivator: {fileID: 0}
-  CaptainsChairPivot: {fileID: 0}
+  CaptainsChairPivot: {fileID: 2354221940317195210}
   TimeLinedUpToSingleWarpTarget: 0
   ShipLogStation: {fileID: 0}
   RepairableSystemInstances:
