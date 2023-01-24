@@ -7,6 +7,13 @@ TagManager:
   - Ship
   - Shield
   - Screen
+  - StatusLight
+  - PathNode
+  - AlarmLight
+  - PathNetwork
+  - EMSource
+  - carpet
+  - wood
   layers:
   - Default
   - TransparentFX
@@ -34,7 +41,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - Invisible
   - 
   - 
   - 

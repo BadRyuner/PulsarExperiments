@@ -14,20 +14,40 @@ namespace PulsarExperiments.Features.Ships
 		protected override void Start()
 		{
 			base.Start();
+			var screenshader = new Material(Shader.Find("Custom/ScreenShader"));
+			foreach(var screen in InteriorDynamic.GetComponentsInChildren<PLUIScreen>())
+				screen.GetComponent<MeshRenderer>().material = screenshader;
 		}
 
 		public override void ShipFinalCalculateStats(ref PLShipStats inStats)
 		{
 			base.ShipFinalCalculateStats(ref inStats);
-			base.DefaultDrone_StatsBasedOnFaction(ref inStats);
 		}
 
 		public override void SetupShipStats(bool previewStats = false, bool startingPlayerShip = false)
 		{
 			base.SetupShipStats(previewStats, startingPlayerShip);
 			this.ShipTypeID = (EShipType)ShipTypeInt;
-			base.IsDrone = true;
+			this.MyStats.Mass = 500f;
+			this.ReverseThrustEnabled = true;
+			this.ThrusterSFXEventName = "intrepid_external_thruster_large";
+			if (this.MyScreenBase != null)
+			{
+				this.MyScreenBase.ScreenThemeAtlas = PLGlobal.Instance.CurvedThemeAtlas;
+			}
+			if (startingPlayerShip)
+			{
+				this.NumberOfFuelCapsules = 20;
+			}
+			else
+			{
+				this.NumberOfFuelCapsules = 5;
+			}
 			this.GX_ID = "Tier Unknown UFO";
+			this.FactionID = 0;
+			this.ShipExplosionID = 14;
+			this.AngDragMultiplier = 1.3f;
+
 			this.MyStats.SetSlotLimit(ESlotType.E_COMP_HULL, 1);
 			this.MyStats.SetSlotLimit(ESlotType.E_COMP_CPU, 2);
 			this.MyStats.SetSlotLimit(ESlotType.E_COMP_REACTOR, 1);
@@ -39,10 +59,20 @@ namespace PulsarExperiments.Features.Ships
 			this.MyStats.SetSlotLimit(ESlotType.E_COMP_THRUSTER, 1);
 			this.MyStats.SetSlotLimit(ESlotType.E_COMP_INERTIA_THRUSTER, 1);
 			this.MyStats.SetSlotLimit(ESlotType.E_COMP_MANEUVER_THRUSTER, 2);
+			this.MyStats.SetSlotLimit(ESlotType.E_COMP_CARGO, 2);
+
+			//this.MyStats.SetSlotLimit(ESlotType.E_COMP_O2, 1);
+			this.MyStats.SetSlotLimit(ESlotType.E_COMP_HULLPLATING, 1);
+			this.MyStats.SetSlotLimit(ESlotType.E_COMP_CAPTAINS_CHAIR, 1);
+			this.MyStats.SetSlotLimit(ESlotType.E_COMP_SENSORDISH, 1);
+
 			base.ShipNameValue = "UFO";
 			if (PhotonNetwork.isMasterClient)
 			{
 				PLRand shipDeterministicRand = PLShipInfoBase.GetShipDeterministicRand(this.PersistantShipInfo, 0);
+				this.MyStats.AddShipComponent(new PLHullPlating(EHullPlatingType.E_HULLPLATING_CCGE, 0), -1, ESlotType.E_COMP_NONE);
+				this.MyStats.AddShipComponent(new PLCaptainsChair(ECaptainsChairType.E_COLONIAL_CLASSIC, 0, 0), -1, ESlotType.E_COMP_NONE);
+				this.MyStats.AddShipComponent(new PLSensorDish(ESensorDishType.E_NORMAL, 0), -1, ESlotType.E_COMP_NONE);
 				float num = Mathf.Clamp01(shipDeterministicRand.NextFloat() * 0.5f + PLServer.Instance.ChaosLevel * 0.12f);
 				if (num < 0.3f)
 				{

@@ -57,7 +57,7 @@ namespace PulsarExperiments
 				case "ufo1":
 					{
 						var ufoid = (EShipType)UfoWithInteriorShip.ShipTypeInt;
-						PLEncounterManager.Instance.GetCPEI().SpawnEnemyShip(ufoid, new PLPersistantShipInfo(ufoid, 2, PLServer.GetCurrentSector()));
+						PLEncounterManager.Instance.GetCPEI().SpawnEnemyShip(ufoid, new PLPersistantShipInfo(ufoid, 2, PLServer.GetCurrentSector(), ensureNoCrew: true));
 					}
 					break;
 				case "unload":

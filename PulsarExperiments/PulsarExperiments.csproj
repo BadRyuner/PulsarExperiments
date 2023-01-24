@@ -52,6 +52,11 @@
       <HintPath>..\Libs\Assembly-CSharp-firstpass.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="AstarPathfindingProject, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\AstarPathfindingProject.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Photon3Unity3D">
       <HintPath>..\Libs\Photon3Unity3D.dll</HintPath>
       <Private>False</Private>
@@ -214,11 +219,12 @@
     <Compile Include="Mod.cs" />
     <Compile Include="Prefabs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScaryThings\NullRefDetector3000.cs" />
+    <Compile Include="ScaryThings\PLShipAStarConnectionForBundles.cs" />
     <Compile Include="ScaryThings\SetVector.cs" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
